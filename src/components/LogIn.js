@@ -8,7 +8,7 @@ class LogIn extends Component {
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1"
-                               aria-describedby="emailHelp"/>
+                               aria-describedby="emailHelp" placeholder="example@abc.com"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Password</label>
