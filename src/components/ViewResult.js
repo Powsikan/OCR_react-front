@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class ViewResult extends Component {
     render() {
         return (
-            <div>
+            <div  className="container">
                 view result
             </div>
         );
