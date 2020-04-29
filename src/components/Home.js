@@ -11,6 +11,7 @@ class Home extends Component {
         alert(
             `Selected file - ${this.fileInput.current.files[0].name}`
         );
+        console.log("uploaded");
     }
 
     render() {
@@ -23,9 +24,12 @@ class Home extends Component {
                     <hr className="my-4"/>
                         <p>It detect the text in the Image and give back to you as text format.</p>
                     <div className="upload">
-                        <input type="file" ref={this.fileInput} style={{display:"none"}}/>
+                        <form  onSubmit={this.handleSubmit} >
+                        <input type="file" ref={this.fileInput} />
+                  
+                        <button className="btn btn-primary btn-lg" type="submit"  >Upload Image</button>
+                        </form>
                     </div>
-                        <button className="btn btn-primary btn-lg"  onSubmit={this.handleSubmit}  >Upload Image</button>
                 </div>
 
                 <div className="card">
