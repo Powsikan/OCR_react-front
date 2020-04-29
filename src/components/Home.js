@@ -9,7 +9,7 @@ class Home extends Component {
                     <p className="lead">This is a simple Text recognizing application.</p>
                     <hr className="my-4"/>
                         <p>It detect the text in the Image and give back to you as text format.</p>
-                        <a className="btn btn-primary btn-lg"   type="file">Upload Image</a>
+                        <button className="btn btn-primary btn-lg"   type="file" >Upload Image</button>
                 </div>
 
                 <div className="card">
