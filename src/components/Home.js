@@ -1,25 +1,21 @@
 import React, {Component} from 'react';
 
-function buildFileSelector() {
-    const fileSelector = document.createElement('input');
-    fileSelector.setAttribute('type', 'file');
-    fileSelector.setAttribute('multiple', 'multiple');
-    return fileSelector;
-}
-
 class Home extends Component {
-    componentDidMount() {
-        this.fileSelector = buildFileSelector();
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.fileInput = React.createRef();
     }
 
-    handleFileSelect = (e) => {
-        e.preventDefault();
-        this.fileSelector.click();
+    handleSubmit(event) {
+        event.preventDefault();
+        const file = event.target.files[0].name;
+        console.log("uploaded"+{file});
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        console.log("image uploaded");
+    handleClick(event) {
+         this.refs.fileUploader.click();
     }
 
     render() {
@@ -33,14 +29,18 @@ class Home extends Component {
                     <p>It detect the text in the Image and give back to you as text format.</p>
 
                     <form onSubmit={this.handleSubmit}>
-                        <a className="upload" href="" onClick={this.handleFileSelect}>choose file</a>
+                        <div className="upload" onClick={this.handleClick}>
+                            <h5>Choose file</h5>
+                            <input type="file" ref="fileUploader"  id="file"/>
+                        </div>
+
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
                     </form>
 
                 </div>
 
                 <div className="card">
-                    <img src="../images/upl.png" className="card-img-top" alt="uploaded"/>
+                    <img id="img" src="../images/sd.jpg" className="card-img-top" alt="uploaded"/>
                     <div className="card-body">
                         <h5 className="card-title">Result for Uploaded Image</h5>
                         <p className="card-text">Some quick example text to build on the card title and make up the
