@@ -8,19 +8,6 @@ function buildFileSelector() {
 }
 
 class Home extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    //     this.fileInput = React.createRef();
-    // }
-    // handleSubmit(event) {
-    //     event.preventDefault();
-    //     alert(
-    //         `Selected file - ${this.fileInput.current.files[0].name}`
-    //     );
-    //     console.log("uploaded");
-    // }
-
     componentDidMount() {
         this.fileSelector = buildFileSelector();
     }
