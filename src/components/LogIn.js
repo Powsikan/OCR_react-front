@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-
+import "../App.css";
 class LogIn extends Component {
     render() {
         return (
             <div className="container">
+                <div className="cont">
+                    <h2 className="heading">Login here</h2>
                 <form>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
@@ -17,6 +19,7 @@ class LogIn extends Component {
 
                     <button type="submit" className="btn btn-primary">LogIn</button>
                 </form>
+                </div>
             </div>
     );
     }

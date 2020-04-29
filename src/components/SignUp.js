@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-
+import "../App.css";
 class SignUp extends Component {
     render() {
         return (
             <div className="container">
+                <div className="cont">
+                    <h2 className="heading">SignUp here</h2>
                 <form>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
@@ -21,6 +23,7 @@ class SignUp extends Component {
 
                     <button type="submit" className="btn btn-success">SignUp</button>
                 </form>
+                </div>
             </div>
         );
     }
