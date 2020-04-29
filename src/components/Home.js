@@ -1,7 +1,20 @@
-import React, {Component} from 'react';
+import React, {Component, useRef} from 'react';
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.fileInput = React.createRef();
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+        alert(
+            `Selected file - ${this.fileInput.current.files[0].name}`
+        );
+    }
+
     render() {
+
         return (
             <div  className="container">
                 <div className="jumbotron">
@@ -9,7 +22,9 @@ class Home extends Component {
                     <p className="lead">This is a simple Text recognizing application.</p>
                     <hr className="my-4"/>
                         <p>It detect the text in the Image and give back to you as text format.</p>
-                        <button className="btn btn-primary btn-lg"   type="file" >Upload Image</button>
+                    <div className="upload">
+                        <input type="file" ref={this.fileInput} />                    </div>
+                        <button className="btn btn-primary btn-lg"  onSubmit={this.handleSubmit}  >Upload Image</button>
                 </div>
 
                 <div className="card">
