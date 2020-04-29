@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class NavBar extends Component {
     render() {
         return (
-            <div >
+            <div>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-secondary rounded">
                     <a className="navbar-brand" href="/">OCR</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
