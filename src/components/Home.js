@@ -1,19 +1,38 @@
 import React, {Component} from 'react';
+function buildFileSelector(){
+    const fileSelector = document.createElement('input');
+    fileSelector.setAttribute('type', 'file');
+    fileSelector.setAttribute('multiple', 'multiple');
+    return fileSelector;
+}
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.fileInput = React.createRef();
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-        alert(
-            `Selected file - ${this.fileInput.current.files[0].name}`
-        );
-        console.log("uploaded");
+    // constructor(props) {
+    //     super(props);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    //     this.fileInput = React.createRef();
+    // }
+    // handleSubmit(event) {
+    //     event.preventDefault();
+    //     alert(
+    //         `Selected file - ${this.fileInput.current.files[0].name}`
+    //     );
+    //     console.log("uploaded");
+    // }
+
+    componentDidMount(){
+        this.fileSelector = buildFileSelector();
     }
 
+    handleFileSelect = (e) => {
+        e.preventDefault();
+        this.fileSelector.click();
+    }
+
+    handleSubmit(e) {
+e.preventDefault();
+console.log("image uploaded");
+    }
     render() {
 
         return (
@@ -23,13 +42,12 @@ class Home extends Component {
                     <p className="lead">This is a simple Text recognizing application.</p>
                     <hr className="my-4"/>
                         <p>It detect the text in the Image and give back to you as text format.</p>
-                    <div className="upload">
+
                         <form  onSubmit={this.handleSubmit} >
-                        <input type="file" ref={this.fileInput} />
-                  
+                                <a className="upload" href="" onClick={this.handleFileSelect}>choose file</a>
                         <button className="btn btn-primary btn-lg" type="submit"  >Upload Image</button>
                         </form>
-                    </div>
+
                 </div>
 
                 <div className="card">
@@ -45,6 +63,8 @@ class Home extends Component {
             </div>
         );
     }
+
+
 }
 
 export default Home;
