@@ -18,7 +18,7 @@ function ViewResult() {
 
     return (
         <div className="container">
-            {datas.map(data => (
+           {datas.map(data => (
                 <div className="card">
                     <img src={data.imageUrl} className="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -27,10 +27,8 @@ function ViewResult() {
                         <button className="btn btn-danger">Delete the result</button>
                     </div>
                 </div>
-            ))}
+           ))}
         </div>
-
-
     );
 
 }
