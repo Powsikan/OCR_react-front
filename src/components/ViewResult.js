@@ -10,11 +10,12 @@ function ViewResult() {
 
     const getdata = async () => {
         const response = await fetch(
-            "http://localhost:8080/picture"
+            "http://localhost:8080/picture",{ mode: 'no-cors' }
         );
         const data = await response.json();
         setDatas(data);
     };
+    console.log(datas);
 
     return (
         <div className="container">
