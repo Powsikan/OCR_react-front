@@ -4,7 +4,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
-            file:null
+            file:null,
+            user:"powsikan"
         };
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,10 +14,10 @@ class Home extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState ({file: event.target.files})
+        this.setState ({file: event.target.files,user: "powsikan"})
         const formData = new FormData();
-        formData.append('file', this.state.file);
-        fetch('http://localhost:8080/picture/powsikan', {
+        formData.append('file', this.state.file,);
+        fetch('http://localhost:8080/picture/', {
             method: 'post',
             body: formData
         }).then(res => {
