@@ -4,7 +4,6 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
-            file:null
         };
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,9 +12,7 @@ class Home extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState ({file:event.target.files});
-
-
+        this.setState ({file: event.target.files})
         const formData = new FormData();
         formData.append('file', this.state.file);
         fetch('http://localhost:8080/picture/powsikan', {
@@ -32,6 +29,7 @@ class Home extends Component {
 
     handleClick(event) {
          this.refs.fileUploader.click();
+
     }
 
     render() {
@@ -47,7 +45,7 @@ class Home extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="upload" name="file" onClick={this.handleClick}>
                             <h5>Choose file</h5>
-                            <input type="file" ref="fileUploader"  />
+                            <input type="file" name="file" ref="fileUploader"  />
                         </div>
 
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
