@@ -10,7 +10,7 @@ function ViewResult() {
 
     const getdata = async () => {
         const response = await fetch(
-            "http://localhost:8080/picture",{ mode: 'no-cors' }
+            "http://localhost:8080/picture"
         );
         const data = await response.json();
         setDatas(data);
@@ -20,7 +20,7 @@ function ViewResult() {
     return (
         <div className="container">
            {datas.map(data => (
-                <div className="card">
+                <div className="card" id={data.id}>
                     <img src={data.imageUrl} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">Result for Uploaded Image</h5>

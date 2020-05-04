@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 class Home extends Component {
     constructor(props) {
         super(props);
+        this.state={
+            file:null
+        };
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.fileInput = React.createRef();
@@ -10,8 +13,21 @@ class Home extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const file = event.target.files[0].name;
-        console.log("uploaded"+{file});
+        this.setState ({file:event.target.files});
+
+
+        const formData = new FormData();
+        formData.append('file', this.state.file);
+        fetch('http://localhost:8080/picture/powsikan', {
+            method: 'post',
+            body: formData
+        }).then(res => {
+            if(res.ok) {
+                console.log(res.data);
+                alert("File uploaded successfully.")
+            }
+        });
+
     }
 
     handleClick(event) {
@@ -29,9 +45,9 @@ class Home extends Component {
                     <p>It detect the text in the Image and give back to you as text format.</p>
 
                     <form onSubmit={this.handleSubmit}>
-                        <div className="upload" onClick={this.handleClick}>
+                        <div className="upload" name="file" onClick={this.handleClick}>
                             <h5>Choose file</h5>
-                            <input type="file" ref="fileUploader"  id="file"/>
+                            <input type="file" ref="fileUploader"  />
                         </div>
 
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
