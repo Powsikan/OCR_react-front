@@ -14,24 +14,19 @@ class SignUp extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChange=(event)=> {
         this.setState({
-            email: event.target.email,
-            password: event.target.password,
-            conpassword:event.target.conpassword
+         [event.target.name]:event.target.value
 
-        });
+         });
     }
 
 
-    handleSubmit(event) {
+    handleSubmit=(event)=> {
         event.preventDefault();
-        const formData = new FormData();
-        formData.append('email', this.state.email);
-        formData.append('password', this.state.password);
-        fetch('http://localhost:8080/user', {
+        fetch('http://localhost:8080/users', {
             method: 'post',
-            body: formData
+            body:[this.state.email, this.state.password]
         }).then(res => {
             if (res.ok) {
                 console.log(res.data);
@@ -41,6 +36,7 @@ class SignUp extends Component {
     }
 
     render() {
+        const {email,password,conpassword}=this.state
         return (
             <div className="container">
                 <div className="cont">
@@ -50,17 +46,17 @@ class SignUp extends Component {
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" id="exampleInputEmail1"
                                    aria-describedby="emailHelp" placeholder="example@abc.com" name="email"
-                                   value={this.state.email} onChange={this.handleChange}/>
+                                   value={email} onChange={this.handleChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" id="exampleInputPassword1" name="password"
-                                   value={this.state.password} onChange={this.handleChange}/>
+                                   value={password} onChange={this.handleChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1">Confirm Password</label>
                             <input type="password" className="form-control" id="exampleInputPassword2"
-                                   name="conpassword" value={this.state.conpassword} onChange={this.handleChange}/>
+                                   name="conpassword" value={conpassword} onChange={this.handleChange}/>
                         </div>
 
                         <button type="submit" className="btn btn-success">SignUp</button>
