@@ -23,7 +23,7 @@
 }
 
 .upload input{
-    display: none;
+    display: inline-block;
 }
 .card{
    margin: 10px;

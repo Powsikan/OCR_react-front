@@ -3,21 +3,14 @@ import React, {Component} from 'react';
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            file: null,
-        };
-        this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.fileInput = React.createRef();
     }
 
     handleSubmit(event) {
-
         event.preventDefault();
-        this.setState({file: event.target.files })
         const formData = new FormData();
-        formData.append('file', this.state.file);
-        console.log(formData)
+        formData.append('file', this.fileInput.current.files[0]);
         fetch('http://localhost:8080/picture/powsikan', {
             method: 'post',
             body: formData
@@ -29,10 +22,6 @@ class Home extends Component {
         });
     }
 
-    handleClick(event) {
-        this.refs.fileUploader.click();
-    }
-
     render() {
         return (
             <div className="container">
@@ -42,9 +31,9 @@ class Home extends Component {
                     <hr className="my-4"/>
                     <p>It detect the text in the Image and give back to you as text format.</p>
                     <form onSubmit={this.handleSubmit}>
-                        <div className="upload" onClick={this.handleClick}>
+                        <div>
                             <h5>Choose file</h5>
-                            <input type="file" name="file" ref="fileUploader"/>
+                            <input className="upload" type="file" name="file" ref={this.fileInput}/>
                         </div>
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
                     </form>
@@ -53,4 +42,5 @@ class Home extends Component {
         );
     }
 }
+
 export default Home;
