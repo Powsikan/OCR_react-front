@@ -4,6 +4,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
+            file:null
         };
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,16 +52,6 @@ class Home extends Component {
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
                     </form>
 
-                </div>
-
-                <div className="card">
-                    <img id="img" src="../images/sd.jpg" className="card-img-top" alt="uploaded"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Result for Uploaded Image</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
-                        <button className="btn btn-success">Save the result</button>
-                    </div>
                 </div>
 
             </div>
