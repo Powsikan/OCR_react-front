@@ -20,7 +20,7 @@ function ViewResult() {
     return (
         <div className="container">
            {datas.map(data => (
-                <div className="card" id={data.id}>
+                <div className="card" key={data.id}>
                     <img src={data.imageUrl} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">Result for Uploaded Image</h5>
