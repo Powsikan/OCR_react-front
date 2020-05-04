@@ -25,17 +25,13 @@
 .upload input{
     display: inline-block;
 }
-/*.card{*/
-/*    width: 600px;*/
-/*    height: 700px;*/
-/*   margin: 10px;*/
-/*    display: inline-block;*/
-/*}*/
-/*.card-img-top{*/
-/*    width: 600px;*/
-/*    height: 400px;*/
-/*}*/
-/*.card-body{*/
-/*    width: 600px;*/
-/*    height: 200px;*/
-/*}*/
+.card{
+    width: 600px;
+   margin: 10px;
+    display: inline-block;
+}
+.card-img-top{
+    width: 600px;
+    height: 300px;
+}
+
