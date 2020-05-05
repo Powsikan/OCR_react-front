@@ -38,11 +38,12 @@ class SignUp extends Component {
         const data={
             Username: this.state.email,
             password: this.state.password
-        }
+        };
         console.log(data)
         fetch('http://localhost:8080/users', {
             method: 'post',
-            body:data
+            body: JSON.stringify(data),
+            headers:{ 'Content-Type': 'application/json'}
         }).then(res => {
             if (res.ok) {
                 console.log(res.data);
