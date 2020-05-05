@@ -36,7 +36,7 @@ class SignUp extends Component {
     handleSubmit=(event)=> {
         event.preventDefault();
         const data={
-            Username: this.state.email,
+            username: this.state.email,
             password: this.state.password
         };
         console.log(data)
