@@ -7,7 +7,8 @@ class SignUp extends Component {
         this.state = {
             email: '',
             password: '',
-            conpassword: ''
+            conpassword: '',
+            errormessage: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -15,18 +16,33 @@ class SignUp extends Component {
     }
 
     handleChange=(event)=> {
+        let nam = event.target.name;
+        let val = event.target.value;
+        let err = '';
+        if (nam==='conpassword'){
+            if (val !=="" && val !==this.state.password) {
+                err = <strong style={{color:'red'}}>Your Confirmation password not matched</strong>;
+            }
+        }
         this.setState({
-         [event.target.name]:event.target.value
-
+            errormessage:err
+        });
+        this.setState({
+            [nam]:val
          });
     }
 
 
     handleSubmit=(event)=> {
         event.preventDefault();
+        const data={
+            Username: this.state.email,
+            password: this.state.password
+        }
+        console.log(data)
         fetch('http://localhost:8080/users', {
             method: 'post',
-            body:[this.state.email, this.state.password]
+            body:data
         }).then(res => {
             if (res.ok) {
                 console.log(res.data);
@@ -57,6 +73,7 @@ class SignUp extends Component {
                             <label htmlFor="exampleInputPassword1">Confirm Password</label>
                             <input type="password" className="form-control" id="exampleInputPassword2"
                                    name="conpassword" value={conpassword} onChange={this.handleChange}/>
+                            {this.state.errormessage}
                         </div>
 
                         <button type="submit" className="btn btn-success">SignUp</button>
