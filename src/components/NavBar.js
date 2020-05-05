@@ -17,7 +17,7 @@ class NavBar extends Component {
                             <li><Link to={'/viewresult'} className="  nav-link">View Result</Link></li>
                         </ul>
                         <ul className="nav navbar-nav  ml-auto">
-                            <li><Link to={'/login'} className="nav-link ">LogIn</Link></li>
+                            <li><Link to={'/login' } className="nav-link ">LogIn</Link></li>
                             <li><Link to={'/signup'} className=" nav-link">SignUp</Link></li>
                         </ul>
                     </div>

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import "../App.css";
 
 class LogIn extends Component {
@@ -17,8 +18,7 @@ class LogIn extends Component {
                             <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" id="exampleInputPassword1"/>
                         </div>
-
-                        <button type="submit" className="btn btn-primary">LogIn</button>
+                     <Link to={'/'}> <button type="submit" className="btn btn-primary">LogIn</button></Link>
                     </form>
                 </div>
             </div>

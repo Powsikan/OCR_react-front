@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import "../App.css";
 
 class SignUp extends Component {
@@ -77,7 +78,7 @@ class SignUp extends Component {
                             {this.state.errormessage}
                         </div>
 
-                        <button type="submit" className="btn btn-success">SignUp</button>
+                       <Link to={'/login'}><button type="submit" className="btn btn-success">SignUp</button></Link>
                     </form>
                 </div>
             </div>
