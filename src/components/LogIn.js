@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "../App.css";
+import{Redirect} from "react-router-dom";
 
 class LogIn extends Component {
 submitLogin(e){
@@ -16,8 +17,7 @@ submitLogin(e){
         headers:{ 'Content-Type': 'application/json'}
     }).then(res => {
         if (res.ok) {
-           window.location.anchor("Home.js")
-            alert("User register successfully.")
+          return <Redirect to="Home.js" />;
         }
     });
 }
