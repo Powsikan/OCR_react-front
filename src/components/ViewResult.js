@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import NavBarHome from "./nav/NavBarHome";
 
 function ViewResult() {
 
@@ -18,6 +19,7 @@ function ViewResult() {
     console.log(datas);
 
     return (
+        <div>
         <div className="container">
             {datas.map(data => (
                 <div className="card" key={data.id}>
@@ -29,6 +31,7 @@ function ViewResult() {
                     </div>
                 </div>
             ))}
+        </div>
         </div>
     );
 

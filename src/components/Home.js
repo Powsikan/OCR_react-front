@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NavBarHome from "./nav/NavBarHome";
 
 class Home extends Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class Home extends Component {
 
     render() {
         return (
+            <div>
             <div className="container">
                 <div className="jumbotron">
                     <h1 className="display-4">OCR Text Detector</h1>
@@ -38,6 +40,7 @@ class Home extends Component {
                         <button className="btn btn-primary btn-lg" type="submit">Upload Image</button>
                     </form>
                 </div>
+            </div>
             </div>
         );
     }

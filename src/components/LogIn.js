@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "../App.css";
+import NavBar from "./nav/NavBar";
 
 class LogIn extends Component {
 submitLogin(e){
@@ -24,6 +25,7 @@ submitLogin(e){
 
     render() {
         return (
+            <div>
             <div className="container">
                 <div className="cont">
                     <h2 className="heading">Login here</h2>
@@ -40,6 +42,7 @@ submitLogin(e){
                      <button type="submit" className="btn btn-primary">LogIn</button>
                     </form>
                 </div>
+            </div>
             </div>
         );
     }

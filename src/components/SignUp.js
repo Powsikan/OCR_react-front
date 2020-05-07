@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import "../App.css";
+import NavBar from "./nav/NavBar";
 
 class SignUp extends Component {
     constructor(props) {
@@ -57,6 +58,7 @@ class SignUp extends Component {
     render() {
         const {email,password,conpassword}=this.state
         return (
+            <div>
             <div className="container">
                 <div className="cont">
                     <h2 className="heading">SignUp here</h2>
@@ -82,6 +84,7 @@ class SignUp extends Component {
                        <Link to={'/login'}><button type="submit" className="btn btn-success">SignUp</button></Link>
                     </form>
                 </div>
+            </div>
             </div>
         );
     }
