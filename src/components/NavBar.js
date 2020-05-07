@@ -13,12 +13,13 @@ class NavBar extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav  mr-auto">
-                            <li><Link to={'/'} className=" nav-link" > Home </Link></li>
+                            <li><Link to={'/home' } className="nav-link " >Home</Link></li>
                             <li><Link to={'/viewresult'} className="  nav-link" >View Result</Link></li>
                         </ul>
                         <ul className="nav navbar-nav  ml-auto">
-                            <li><Link to={'/login' } className="nav-link " >LogIn</Link></li>
+                            <li><Link to={'/'} className=" nav-link" > LogIn </Link></li>
                             <li><Link to={'/signup'} className=" nav-link" >SignUp</Link></li>
+                            <li><Link to={'/logout'} className=" nav-link" > LogOut </Link></li>
                         </ul>
                     </div>
                 </nav>
