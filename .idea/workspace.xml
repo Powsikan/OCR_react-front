@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="94546721-d018-42ed-8547-d29ced1fd814" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ViewResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ViewResult.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,8 @@
       <workItem from="1588556199297" duration="17117000" />
       <workItem from="1588646845807" duration="7263000" />
       <workItem from="1588819671438" duration="2763000" />
-      <workItem from="1588857156449" duration="6094000" />
+      <workItem from="1588857156449" duration="6165000" />
+      <workItem from="1588992751292" duration="1177000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1581599346892</created>
@@ -405,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588866525716</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="login api connected">
+      <created>1588867028024</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1588867028024</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,34 +442,34 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1581599754079" />
-    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2" timestamp="1588866525607">
+    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2" timestamp="1588867027933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1588866525607" />
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1588859864051">
+    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1588867027933" />
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1588994771478">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1588859864051" />
-    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1588859864050">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1588994771478" />
+    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1588994771478">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1588859864050" />
-    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1588859864050">
+    <state width="1897" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1588994771478" />
+    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1588994771478">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1588859864050" />
-    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1588859864050">
+    <state width="1897" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1588994771478" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1588994771478">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1588859864050" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1588994771478" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1581599191690">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1581599191690" />
-    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1588866560280">
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1588994925101">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1588866560280" />
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1588994925101" />
     <state x="538" y="181" width="834" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588825024412">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

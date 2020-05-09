@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import "../App.css";
 import NavBar from "./nav/NavBar";
+import {useHistory} from "react-router";
 
 class LogIn extends Component {
 submitLogin(e){
+
     e.preventDefault();
 
     let user={

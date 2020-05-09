@@ -18,7 +18,7 @@ function App() {
                     <hr/>
                     <Switch>
                         <Route exact path='/' component={LogIn}/>
-              nav          <Route path='/home' component={Home}/>
+                        <Route path='/home' component={Home}/>
                         <Route path='/signup' component={SignUp}/>
                         <Route path='/viewresult' component={ViewResult}/>
                     </Switch>
