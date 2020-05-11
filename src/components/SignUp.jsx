@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import "../App.css";
-import NavBar from "./nav/NavBar";
 import history from "../history";
 
 class SignUp extends Component {
@@ -82,8 +80,7 @@ class SignUp extends Component {
                                    name="conpassword" value={conpassword} onChange={this.handleChange}/>
                             {this.state.errormessage}
                         </div>
-
-                       <Link to={'/login'}><button type="submit" className="btn btn-success">SignUp</button></Link>
+                       <button type="submit" className="btn btn-success">SignUp</button>
                     </form>
                 </div>
             </div>
