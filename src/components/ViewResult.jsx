@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import NavBarHome from "./nav/NavBarHome";
 
 function ViewResult() {
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import "../App.css";
 import NavBar from "./nav/NavBar";
+import history from "../history";
 
 class SignUp extends Component {
     constructor(props) {
@@ -49,14 +50,15 @@ class SignUp extends Component {
         }).then(res => {
             if (res.ok) {
                 console.log(res.data);
-                alert("User register successfully.")
+                alert("User register successfully.");
+                history.push('/home');
             }
         });
 
     }
 
     render() {
-        const {email,password,conpassword}=this.state
+        const {email,password,conpassword}=this.state;
         return (
             <div>
             <div className="container">

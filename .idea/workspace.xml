@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94546721-d018-42ed-8547-d29ced1fd814" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LogOut.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ViewResult.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ViewResult.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,14 +96,7 @@
       <workItem from="1588857156449" duration="6165000" />
       <workItem from="1588992751292" duration="1268000" />
       <workItem from="1589077845307" duration="242000" />
-      <workItem from="1589197310715" duration="1058000" />
-    </task>
-    <task id="LOCAL-00003" summary="pages components added&#10;error fixing bootstrap added">
-      <created>1581660275540</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1581660275540</updated>
+      <workItem from="1589197310715" duration="1445000" />
     </task>
     <task id="LOCAL-00004" summary="card view added">
       <created>1581667086156</created>
@@ -440,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589198289168</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="login api connected">
+      <created>1589198576243</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1589198576243</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,10 +472,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1581599754079" />
-    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2" timestamp="1589198289035">
+    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2" timestamp="1589198576151">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1589198289035" />
+    <state x="500" y="148" width="909" height="818" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1589198576151" />
     <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1589198523620">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
