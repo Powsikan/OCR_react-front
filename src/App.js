@@ -17,10 +17,10 @@ function App() {
                     <NavBar></NavBar>
                     <hr/>
                     <Switch>
-                        <Route exact path='/' component={LogIn}/>
-                        <Route path='/home' component={Home}/>
-                        <Route path='/signup' component={SignUp}/>
-                        <Route path='/viewresult' component={ViewResult}/>
+                        <Route exact path='/' exact component={LogIn}/>
+                        <Route path='/home' exact component={Home}/>
+                        <Route path='/signup' exact omponent={SignUp}/>
+                        <Route path='/viewresult' exact component={ViewResult}/>
                     </Switch>
                 </div>
             </Router>

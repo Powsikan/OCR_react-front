@@ -18,7 +18,7 @@ submitLogin(e){
         headers:{ 'Content-Type': 'application/json'}
     }).then(res => {
         if (res.ok) {
-          alert("login success");
+          // alert("login success");
           history.push('/home');
         }
     });
