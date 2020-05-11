@@ -19,7 +19,7 @@ submitLogin(e){
     }).then(res => {
         if (res.ok) {
           alert("login success");
-          history.push("/home");
+          history.push('/home');
         }
     });
 }
