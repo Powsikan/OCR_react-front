@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import "../App.css";
-import NavBar from "./nav/NavBar";
-import {useHistory} from "react-router";
+import history from "../history";
 
 class LogIn extends Component {
 submitLogin(e){
@@ -20,6 +19,7 @@ submitLogin(e){
     }).then(res => {
         if (res.ok) {
           alert("login success");
+          history.push("/home");
         }
     });
 }
