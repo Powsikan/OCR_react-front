@@ -20,7 +20,7 @@ submitLogin(e){
     }).then(res => {
         if (res.ok) {
           // alert("login success");
-          history.push('/home');
+          this.props.history.push('/home');
         }
     });
 }

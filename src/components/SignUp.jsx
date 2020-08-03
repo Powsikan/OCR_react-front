@@ -49,7 +49,7 @@ class SignUp extends Component {
             if (res.ok) {
                 console.log(res.data);
                 alert("User register successfully.");
-                history.push('/home');
+                this.props.history.push('/home');
             }
         });
 
